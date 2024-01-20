@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn5vaf824fnl0"]
+
+[ext_resource type="Texture2D" uid="uid://2ymugneieout" path="res://assets/arcade.png" id="1_e2wgr"]
+[ext_resource type="Script" path="res://arcade_cabinet.gd" id="1_l5yjm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wblhx"]
+size = Vector2(16, 16)
+
+[node name="arcade_cabinet" type="Node2D"]
+script = ExtResource("1_l5yjm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_e2wgr")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_wblhx")
