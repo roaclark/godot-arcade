@@ -1,19 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://dn5vaf824fnl0"]
+[gd_scene load_steps=5 format=3 uid="uid://dn5vaf824fnl0"]
 
 [ext_resource type="Texture2D" uid="uid://2ymugneieout" path="res://assets/arcade.png" id="1_e2wgr"]
 [ext_resource type="Script" path="res://arcade_cabinet.gd" id="1_l5yjm"]
+[ext_resource type="Texture2D" uid="uid://b45hxfl3oawtr" path="res://assets/selection.png" id="3_f3jlx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wblhx"]
 size = Vector2(16, 16)
 
-[node name="arcade_cabinet" type="Node2D"]
+[node name="arcade_cabinet" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_l5yjm")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_e2wgr")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Selection" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(0, -15)
+texture = ExtResource("3_f3jlx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_wblhx")
+
+[node name="arcade_cabinet" type="Node2D" parent="."]
