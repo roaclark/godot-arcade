@@ -14,7 +14,7 @@ layer_0/tile_data = PackedInt32Array(0, 458752, 0, 65536, 327680, 0, 131072, 327
 
 [node name="arcade_cabinet" parent="." instance=ExtResource("2_0q0mn")]
 position = Vector2(16, -32)
-game_path = "scenes/platformer/main.tscn"
+game_path = "scenes/fighter/main.tscn"
 color = Color(0.556863, 0.54902, 0.870588, 1)
 
 [node name="arcade_cabinet2" parent="." instance=ExtResource("2_0q0mn")]
@@ -37,6 +37,7 @@ color = Color(0.254902, 0.627451, 0.858824, 1)
 
 [node name="arcade_cabinet6" parent="." instance=ExtResource("2_0q0mn")]
 position = Vector2(64, 16)
+game_path = "scenes/fighter/main.tscn"
 color = Color(0.780392, 0.415686, 0.87451, 1)
 
 [node name="character" parent="." instance=ExtResource("3_rjo0u")]
