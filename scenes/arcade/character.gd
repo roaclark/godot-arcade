@@ -54,4 +54,4 @@ func _on_arcade_cabinet_exited(body: Node2D):
 func _input(event):
   if event.is_action_pressed("ui_accept"):
     if arcade_cabinets.size() > 0:
-      arcade_cabinets[-1].selected = false
+      arcade_cabinets[-1].start_arcade_game()

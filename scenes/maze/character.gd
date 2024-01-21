@@ -29,5 +29,4 @@ func _physics_process(_delta):
 
 
 func _on_goal_entered(body):
-  print_debug(body)
   won = true

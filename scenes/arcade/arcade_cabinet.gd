@@ -6,17 +6,13 @@ extends Node2D
   set(new_color):
     color = new_color
     $Sprite.modulate = color
-    
+
+var maze_scene = preload("res://scenes/maze/main.tscn")
+
 var selected = false:
   set(new_selected):
     selected = new_selected
     $Selection.visible = selected
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-  pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-  pass
+func start_arcade_game():
+  get_tree().change_scene_to_packed(maze_scene)
