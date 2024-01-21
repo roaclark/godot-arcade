@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_grry8"]
 size = Vector2(8, 16)
 
-[node name="main" type="Node2D"]
+[node name="Maze" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_6mvkc")

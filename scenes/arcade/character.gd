@@ -59,6 +59,5 @@ func _on_arcade_cabinet_exited(body: Node2D):
 func _input(event):
   if event.is_action_pressed("ui_accept"):
     if arcade_cabinets.size() > 0:
-      var game_scene = arcade_cabinets[-1].get_arcade_game()
       GameData.arcade_position = position
-      get_tree().change_scene_to_packed(game_scene)
+      arcade_cabinets[-1].start_arcade_game()

@@ -28,7 +28,7 @@ func _physics_process(_delta):
   move_and_slide()
 
 
-func _on_goal_entered(body):
+func _on_goal_entered(_body):
   won = true
   await get_tree().create_timer(0.3).timeout
   GameData.return_to_arcade()
