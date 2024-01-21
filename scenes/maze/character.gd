@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 48.0
+const SPEED = 72.0
 var won = false:
   set(new_won):
     won = new_won
@@ -30,3 +30,5 @@ func _physics_process(_delta):
 
 func _on_goal_entered(body):
   won = true
+  await get_tree().create_timer(0.3).timeout
+  GameData.return_to_arcade()

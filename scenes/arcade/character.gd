@@ -4,6 +4,11 @@ const SPEED = 48.0
 
 var arcade_cabinets = []
 
+func _ready():
+  if GameData.arcade_position:
+    position = GameData.arcade_position
+    GameData.arcade_position = null
+
 func _process(_delta):
   if Input.is_action_pressed("ui_right"):
     $sprite.play("walk_right")
@@ -54,4 +59,6 @@ func _on_arcade_cabinet_exited(body: Node2D):
 func _input(event):
   if event.is_action_pressed("ui_accept"):
     if arcade_cabinets.size() > 0:
-      arcade_cabinets[-1].start_arcade_game()
+      var game_scene = arcade_cabinets[-1].get_arcade_game()
+      GameData.arcade_position = position
+      get_tree().change_scene_to_packed(game_scene)

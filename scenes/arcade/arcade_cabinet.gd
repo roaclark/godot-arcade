@@ -14,5 +14,5 @@ var selected = false:
     selected = new_selected
     $Selection.visible = selected
 
-func start_arcade_game():
-  get_tree().change_scene_to_packed(maze_scene)
+func get_arcade_game():
+  return maze_scene
