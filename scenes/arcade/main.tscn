@@ -14,6 +14,7 @@ layer_0/tile_data = PackedInt32Array(0, 458752, 0, 65536, 327680, 0, 131072, 327
 
 [node name="arcade_cabinet" parent="." instance=ExtResource("2_0q0mn")]
 position = Vector2(16, -32)
+game_path = "scenes/platformer/main.tscn"
 color = Color(0.556863, 0.54902, 0.870588, 1)
 
 [node name="arcade_cabinet2" parent="." instance=ExtResource("2_0q0mn")]
@@ -22,6 +23,7 @@ color = Color(0.870588, 0.419608, 0.592157, 1)
 
 [node name="arcade_cabinet3" parent="." instance=ExtResource("2_0q0mn")]
 position = Vector2(64, -32)
+game_path = "scenes/platformer/main.tscn"
 color = Color(0.47451, 0.65098, 0.376471, 1)
 
 [node name="arcade_cabinet4" parent="." instance=ExtResource("2_0q0mn")]
@@ -30,6 +32,7 @@ color = Color(0.721569, 0.556863, 0.372549, 1)
 
 [node name="arcade_cabinet5" parent="." instance=ExtResource("2_0q0mn")]
 position = Vector2(40, 16)
+game_path = "scenes/platformer/main.tscn"
 color = Color(0.254902, 0.627451, 0.858824, 1)
 
 [node name="arcade_cabinet6" parent="." instance=ExtResource("2_0q0mn")]
